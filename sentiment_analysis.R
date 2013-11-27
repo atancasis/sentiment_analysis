@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript
+
 #import libraries to work with
 library(plyr)
 library(stringr)
