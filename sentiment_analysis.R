@@ -17,10 +17,10 @@ posTerms <- c(afinn_list$word[afinn_list$score==3 | afinn_list$score==2 | afinn_
 vPosTerms <- c(afinn_list$word[afinn_list$score==5 | afinn_list$score==4], "uproarious", "riveting", "fascinating", "dazzling", "legendary")
 
 #load up positive and negative sentences and format
-posText <- read.delim(file='polarityData/rt-polaritydata/rt-polarity-pos.txt', header=FALSE, stringsAsFactors=FALSE)
+posText <- read.delim(file='polarityData/rt-polaritydata/rt-polarity-pos.txt', header=FALSE, stringsAsFactors=FALSE, fileEncoding="iso-8859-1")
 posText <- posText$V1
 posText <- unlist(lapply(posText, function(x) { str_split(x, "\n") }))
-negText <- read.delim(file='polarityData/rt-polaritydata/rt-polarity-neg.txt', header=FALSE, stringsAsFactors=FALSE)
+negText <- read.delim(file='polarityData/rt-polaritydata/rt-polarity-neg.txt', header=FALSE, stringsAsFactors=FALSE, fileEncoding="iso-8859-1")
 negText <- negText$V1
 negText <- unlist(lapply(negText, function(x) { str_split(x, "\n") }))
 
