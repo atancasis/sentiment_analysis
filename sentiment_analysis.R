@@ -3,8 +3,6 @@ library(plyr)
 library(stringr)
 library(e1071)
 
-setwd("~/Documents/GitHub/sentiment_analysis")
-
 #load up word polarity list and format it
 afinn_list <- read.delim(file='AFINN/AFINN-111.txt', header=FALSE, stringsAsFactors=FALSE)
 names(afinn_list) <- c('word', 'score')
