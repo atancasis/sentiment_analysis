@@ -36,5 +36,3 @@ sentimentScore <- function(sentence){
   score <- c(vNegMatches, negMatches, posMatches, vPosMatches)
   return(score)
 }
-
-print(sentimentScore("i really like this movie"))
