@@ -36,3 +36,9 @@ sentimentScore <- function(sentence){
   score <- c(vNegMatches, negMatches, posMatches, vPosMatches)
   return(score)
 }
+
+f <- file("stdin")
+open(f)
+while(length(line <- readLines(f, n=1)) > 0){
+  print(sentimentScore(line))
+}
