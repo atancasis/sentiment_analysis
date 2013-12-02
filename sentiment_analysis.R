@@ -4,7 +4,7 @@
 library(stringr)
 
 #load up word polarity list and format it
-afinn_list <- read.delim(file='AFINN/AFINN-111.txt', header=FALSE, stringsAsFactors=FALSE)
+afinn_list <- read.delim(file='R/AFINN/AFINN-111.txt', header=FALSE, stringsAsFactors=FALSE)
 names(afinn_list) <- c('word', 'score')
 afinn_list$word <- tolower(afinn_list$word)
 
