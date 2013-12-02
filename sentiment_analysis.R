@@ -1,9 +1,7 @@
 #!/usr/bin/Rscript
 
 #import libraries to work with
-library(plyr)
 library(stringr)
-library(e1071)
 
 #load up word polarity list and format it
 afinn_list <- read.delim(file='AFINN/AFINN-111.txt', header=FALSE, stringsAsFactors=FALSE)
@@ -38,3 +36,5 @@ sentimentScore <- function(sentence){
   score <- c(vNegMatches, negMatches, posMatches, vPosMatches)
   return(score)
 }
+
+print(sentimentScore("i really like this movie"))
